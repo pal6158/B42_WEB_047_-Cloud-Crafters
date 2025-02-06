@@ -1,0 +1,35 @@
+/* Navbar Styles */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px; /* Added horizontal padding to give space on the sides */
+    display: flex;
+    justify-content: space-between; /* Spread out the items to the left and right */
+    align-items: center; /* Vertically center the content */
+    position: fixed; /* Keep the navbar fixed at the top */
+    top: 0; /* Position it at the top of the page */
+    width: 100%; /* Ensure it spans the full width of the screen */
+    z-index: 1000; /* Make sure it stays on top of other content */
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Make the list items appear horizontally */
+  }
+  
+  li {
+    margin-right: 20px; /* Space between the nav items */
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Adds a hover effect */
+  }
+  
