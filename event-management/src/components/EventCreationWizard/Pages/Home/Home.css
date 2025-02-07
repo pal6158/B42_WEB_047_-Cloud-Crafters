@@ -13,6 +13,12 @@ html, body {
     align-items: center;
     color: black;
     text-align: center;
+
+
+    background-image: url('/Users/bikashjha/Desktop/ConstructWeek/B42_WEB_047_-Cloud-Crafters/event-management/src/assets/show-dance-floor-vector-background-with-spotlights-party-concert-stage-floor-illustration_1284-42341.avif'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
   }
   
   .welcome-text {
