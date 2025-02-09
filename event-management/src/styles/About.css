@@ -1,0 +1,106 @@
+/* About Page Container */
+.about-container {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f9f9f9, #eef1f6);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    color: #2b2d42;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #555;
+    margin-top: 30px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Team List */
+.team-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.team-member {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+    background: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Styling */
+.home-btn {
+    margin-top: 30px;
+    padding: 12px 25px;
+    border: none;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.home-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #004099);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-member {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .home-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

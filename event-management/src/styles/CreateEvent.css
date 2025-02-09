@@ -1,0 +1,135 @@
+/* CreateEvent.css */
+
+/* Base styles for the body container */
+.body-cont {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form container */
+#form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Left and right boxes for form sections */
+.left-box,
+.right-box {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+/* Adjust input fields and labels for better spacing */
+input[type="text"],
+input[type="email"],
+input[type="datetime-local"],
+input[type="file"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #374151;
+  background-color: #f9fafb;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="datetime-local"]:focus,
+input[type="file"]:focus,
+select:focus {
+  border-color: #7928ca;
+  outline: none;
+}
+
+/* Adjust the layout for Create Event and Add Venue */
+#form > .left-box,
+#form > .right-box {
+  width: 48%;  /* Each box will take up 48% of the width */
+}
+
+/* Create Event button */
+#create-event {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  background-color: #f97316;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  display: block;
+}
+
+#create-event:hover {
+  background-color: #ea580c;
+}
+
+#create-event:disabled {
+  background-color: #fbbf24;
+  cursor: not-allowed;
+}
+
+/* Ensure proper spacing and layout for the venue section */
+.venue-section {
+  display: flex;
+  gap: 20px;
+}
+
+.venue-section .input-box {
+  flex: 1;
+}
+
+.venue-section .add-venue-btn {
+  background-color: #34d399; /* Green for add venue button */
+  color: #ffffff;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.venue-section .add-venue-btn:hover {
+  background-color: #10b981; /* Darker green */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #form {
+    flex-direction: column;
+  }
+
+  #form > .left-box,
+  #form > .right-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .venue-section {
+    flex-direction: column;
+  }
+
+  .venue-section .add-venue-btn {
+    margin-top: 10px;
+  }
+}
