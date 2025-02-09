@@ -15,7 +15,6 @@ import About from './components/About';
 
 function App() {
   return (
-    <Router> {/* Wrap your app with BrowserRouter */}
       <AuthProvider>  {/* Wrap the entire app with AuthProvider */}
         <Navbar /> {/* Include the navbar here to ensure it's available across all routes */}
         <Routes>
@@ -44,7 +43,6 @@ function App() {
         </Routes>
         <Footer /> {/* Include Footer here to display it across all routes */}
       </AuthProvider>
-    </Router>
   );
 }
 
