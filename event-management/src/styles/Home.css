@@ -2,6 +2,7 @@
 .home-container {
   padding: 20px;
   background-color: #f9f9f9;
+  min-height: calc(100vh - 160px); /* Adjust based on your navbar and footer height */
 }
 
 .events-list {
@@ -15,9 +16,7 @@
   margin-bottom: 20px;
 }
 
-.search-input,
-.category-dropdown,
-.sort-dropdown {
+.search-input, .category-dropdown, .sort-dropdown {
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ddd;
@@ -28,15 +27,15 @@
   width: 250px;
 }
 
-.category-dropdown,
-.sort-dropdown {
+.category-dropdown, .sort-dropdown {
   width: 180px;
 }
 
 .event-cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+  min-height: 300px; /* Ensures consistent height */
 }
 
 .event-card {
@@ -44,7 +43,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  width: 300px;
+  width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -65,6 +64,7 @@
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%; /* Full width button */
 }
 
 .view-details-btn:hover {
@@ -77,9 +77,15 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
 }
 
-.logout-btn:hover {
-  background-color: #d32f2f;
+/* No Results Styling */
+.no-events-message {
+  text-align: center;
+  color: #666;
+  margin-top: 50px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -93,7 +93,7 @@ function Home() {
     .filter((event) => {
       return (
         (event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          event.description.toLowerCase().includes(searchQuery.toLowerCase())) &&
+          (event.description && event.description.toLowerCase().includes(searchQuery.toLowerCase()))) &&
         (selectedCategory ? event.category === selectedCategory : true)
       );
     })
@@ -156,7 +156,6 @@ function Home() {
                 <p>{event.description}</p>
                 <p><strong>Location:</strong> {event.location}</p>
 
-                
                 {event.invitees.includes(loggedInUser?.email) ? (
                   <button
                     className="view-details-btn"

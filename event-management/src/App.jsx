@@ -16,7 +16,7 @@ import About from './components/About';
 function App() {
   return (
       <AuthProvider>  {/* Wrap the entire app with AuthProvider */}
-        <Navbar /> {/* Include the navbar here to ensure it's available across all routes */}
+         <Navbar/>{/* Include the navbar here to ensure it's available across all routes */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route

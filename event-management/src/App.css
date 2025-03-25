@@ -1,218 +1,36 @@
-/* Global Styles */
-* {
-  box-sizing: border-box;
-  padding: 0;
+/* Full Page Layout Styles */
+html, body {
+  height: 100%;
   margin: 0;
+  padding: 0;
 }
 
-body {
-  font-family: "Inter", Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
-  line-height: 1.6;
-}
-
-h1, h2 {
-  text-align: center;
-  color: #333;
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .App {
+  flex: 1 0 auto;
   max-width: 1200px;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
   padding: 20px;
 }
 
-/* Navbar */
+/* Ensure Navbar and Footer are flex-shrink: 0 */
 nav {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 
-#back {
-  width: 100%;
-  height: 100px;
+footer {
+  flex-shrink: 0;
 }
 
-/* Profile Container */
-.profile-cont {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: aliceblue;
-  padding: 20px;
-}
-
-/* Event Container */
-.event-cont {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: rgb(223, 223, 223);
-}
-
-/* Responsive Styles */
-@media (max-width: 700px) {
-  .profile-cont {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
   }
-
-  .event-cont {
-    flex-direction: column;
-    padding: 20px;
-    align-items: center;
-  }
-}
-
-/* Controls (Search, Filter) */
-.controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.controls input,
-.controls select {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  transition: border 0.3s ease-in-out;
-}
-
-.controls input:focus,
-.controls select:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-/* Event List */
-.event-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-/* Event Card */
-.event-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.event-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Event Image */
-.event-image {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 10px;
-}
-
-/* Event Card Text */
-.event-card h3 {
-  margin: 0 0 10px;
-  font-size: 1.2rem;
-  color: #222;
-}
-
-.event-card p {
-  margin: 5px 0;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* Signup Form */
-.signup-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-  padding: 20px;
-}
-
-.signup-form {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 30px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.signup-form h2 {
-  margin-bottom: 20px;
-  color: black;
-}
-
-.form-group {
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.form-group label {
-  font-size: 14px;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-bottom: 2px solid black;
-  background-color: transparent;
-  font-size: 14px;
-  outline: none;
-}
-
-.signup-button {
-  width: 100%;
-  padding: 10px;
-  margin: 15px 0;
-  background-color: red;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.signup-button:hover {
-  background-color: #cc0000;
-}
-
-/* Links */
-.signup-form a {
-  color: blue;
-  text-decoration: none;
-}
-
-.signup-form a:hover {
-  text-decoration: underline;
 }
